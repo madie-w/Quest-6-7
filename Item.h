@@ -45,11 +45,13 @@ public: //FUNCTIONS
 
 using namespace std;
 
-void additemsToList(vector<item>inventory) {
+//Add Items Global Function
+void additemsToList(vector<item>inventory) { 
     cout << "How many items would you like to add to your inventory?" << endl;
     int itemcount;
     cin >> itemcount;
 
+    //Creates Item Objects
     for (int index = 1; index < itemcount; index++) {
         item item(itemName, originalPrice);
         cout << "What is the name of the item? " << endl;
@@ -59,6 +61,7 @@ void additemsToList(vector<item>inventory) {
         vector.push_back(item);
     }
 }
+//Print Inventory Global Function
 void printInventory(vector<item>inventory) {
      for (item : item) {
          cout << item << endl;
@@ -67,15 +70,15 @@ void printInventory(vector<item>inventory) {
 
 int main()
 { 
-
+    //Reads Inventory
     vector<item>inventory;
 
+    //Call Global Function: Add Items and Discount The Items
     addItemsToList(inventory);
     item::setDiscount(20);
 
+    //Call Global Function: Print Inventory
     printInventory(inventory);
 
 
 }
-
-
