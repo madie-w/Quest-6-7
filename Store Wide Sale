@@ -10,7 +10,7 @@ using namespace std;
 //Add Items Global Function
 void additemsToList(vector<&item>inventory) { 
     cout << "How many items would you like to add to your inventory?" << endl;
-    cin >> item;
+    cin >> &item;
 
     //Creates Item Objects
     for (int index = 1; index < &item; index++) {
