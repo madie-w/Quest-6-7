@@ -33,11 +33,49 @@ public: //FUNCTIONS
 	double getDiscPrice() { //getter - gets discounted price of item
 		return discountMultiplier * originalPrice;
 	}
-
-
-
-
-
-
 };
 #endif //helps with linking
+
+// Quest6-7B.cpp : This file contains the 'main' function. Program execution begins and ends there.
+//
+
+#include <iostream>
+#include "Item.h"
+#include <string>
+
+using namespace std;
+
+void additemsToList(vector<item>inventory) {
+    cout << "How many items would you like to add to your inventory?" << endl;
+    int itemcount;
+    cin >> itemcount;
+
+    for (int index = 1; index < itemcount; index++) {
+        item item(itemName, originalPrice);
+        cout << "What is the name of the item? " << endl;
+        cin >> item.getName();
+        cout << "What is the price of the item? " << endl;
+        cin >> item.getOPrice();
+        vector.push_back(item);
+    }
+}
+void printInventory(vector<item>inventory) {
+     for (item : item) {
+         cout << item << endl;
+        }
+    }
+
+int main()
+{ 
+
+    vector<item>inventory;
+
+    addItemsToList(inventory);
+    item::setDiscount(20);
+
+    printInventory(inventory);
+
+
+}
+
+
