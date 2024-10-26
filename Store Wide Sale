@@ -13,7 +13,7 @@ void additemsToList(vector<&item>inventory) {
     cin >> item;
 
     //Creates Item Objects
-    for (int index = 1; index < itemcount; index++) {
+    for (int index = 1; index < &item; index++) {
         item item(itemName, originalPrice);
         cout << "What is the name of the item? " << endl;
         cin >> item.getName();
